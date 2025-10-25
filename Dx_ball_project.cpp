@@ -81,7 +81,7 @@ void applyPerk(PerkType t) {
 
 void spawnPerk(float x, float y) {
     int chance = randBetween(1, 100);
-    if (chance <= 25) {
+    if (chance <= 45) {
         Perk p;
         p.x = x; p.y = y; p.size = 18.0f;
         int pick = randBetween(1, 3);
@@ -370,4 +370,5 @@ int main(int argc, char** argv) {
     glutMainLoop();
     return 0;
 }
+
 
