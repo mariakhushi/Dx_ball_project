@@ -329,10 +329,7 @@ void specialKey(int key, int, int) {
     if (state == MENU) {
         if (key == GLUT_KEY_UP) menuIndex = max(0, menuIndex - 1);
         else if (key == GLUT_KEY_DOWN) menuIndex = min((int)menuItems.size()-1, menuIndex + 1);
-    } else if (state == PLAYING) {
-        if (key == GLUT_KEY_LEFT) { paddleX -= paddleSpeed; if (paddleX < 0) paddleX = 0; }
-        else if (key == GLUT_KEY_RIGHT) { paddleX += paddleSpeed; if (paddleX + paddleW > WINDOW_W) paddleX = WINDOW_W - paddleW; }
-    }
+    } 
 }
 
 void mouseMotion(int x, int) {
@@ -373,3 +370,4 @@ int main(int argc, char** argv) {
     glutMainLoop();
     return 0;
 }
+
